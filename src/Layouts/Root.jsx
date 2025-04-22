@@ -1,17 +1,25 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Root = () => {
-    return (
-        <div>
-            <div className="text-5xl bg-green-400">navbar</div>
+  return (
+    <div>
+      {/* Header */}
+      <header className="">
+        <Navbar></Navbar>
+        
+      </header>
 
-            <main className="min-h-[calc(100vh-100px)]">
-                <Outlet />
-            </main>
+      <main className="min-h-[calc(100vh-100px)]">
+        <Outlet />
+      </main>
 
-            <div className="text-5xl bg-blue-400">footer</div>
-        </div>
-    );
+      <div className="">
+        <Footer></Footer>
+      </div>
+    </div>
+  );
 };
 
 export default Root;
